@@ -10,6 +10,7 @@ applications:
         build:
           commands:
             - npx turbo run build --filter=web
+            - ls -a
       artifacts:
         baseDirectory: .next
         files:
