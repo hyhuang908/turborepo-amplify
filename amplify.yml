@@ -7,10 +7,10 @@ applications:
         preBuild:
           commands:
             - npm install -g pnpm
-            - pnpm install
+            - pnpm install --frozen-lockfile
         build:
           commands:
-            - pnpm build
+            - pnpm build --filter=web
             - ls -a
             - ls -a apps/web
       artifacts:
