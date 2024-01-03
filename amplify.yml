@@ -12,8 +12,9 @@ applications:
           commands:
             - npx turbo run build --filter=web
             - ls -a
+            - ls -a apps/web
       artifacts:
-        baseDirectory: .next
+        baseDirectory: apps/web/.next
         files:
           - '**/*'
       cache:
