@@ -36,7 +36,7 @@ const LINKS = [
   {
     title: "Learn",
     href: "https://turbo.build/repo/docs/handbook",
-    description: "Learn more about monorepos with our handbook.",
+    description: "Learn aa more about monorepos with our handbook.",
   },
   {
     title: "Templates",
