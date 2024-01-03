@@ -41,7 +41,7 @@ const LINKS = [
   {
     title: "Templates",
     href: "https://turbo.build/repo/docs/getting-started/from-example",
-    description: "Choose froma over 15 examples and deploy with a single click.",
+    description: "Choose from over 15 examples and deploy with a single click.",
   },
   {
     title: "Deploy",
