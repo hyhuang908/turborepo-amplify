@@ -2,20 +2,17 @@ version: 1
 applications:
   - appRoot: apps/web
     frontend:
-      buildPath: /
       phases:
         preBuild:
           commands:
             - nvm use 18
-            - npm install -g pnpm
-            - pnpm install --frozen-lockfile
+            - npm i -g pnpm
+            - pnpm i --frozen-lockfile
         build:
           commands:
             - pnpm build --filter=web
-            - ls -a
-            - ls -a apps/web
       artifacts:
-        baseDirectory: apps/web/.next
+        baseDirectory: .next
         files:
           - '**/*'
       cache:
