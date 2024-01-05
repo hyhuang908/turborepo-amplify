@@ -1,5 +1,28 @@
 version: 1
 applications:
+  - appRoot: apps/docs
+    env:
+      variables:
+        AMPLIFY_DIFF_DEPLOY: true
+        AMPLIFY_DIFF_DEPLOY_ROOT: apps/docs
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - nvm use 18
+            - npm i -g pnpm
+            - pnpm i --frozen-lockfile
+        build:
+          commands:
+            - pnpm build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
   - appRoot: apps/web
     env:
       variables:
@@ -15,7 +38,6 @@ applications:
         build:
           commands:
             - pnpm build
-            - ls -a .next
       artifacts:
         baseDirectory: .next
         files:
